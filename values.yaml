@@ -54,11 +54,11 @@ backend:
   image:
     repository: lakshya7ghatotkach/lakshya:bk
   targetPort: 5000
-  servicetype: 
+  servicetype: NodePort
 
 
 frontend:
   image:
     repository: lakshya7ghatotkach/lakshya:v1
   targetPort: 80
-  servicetype: LoadBalancer
+  servicetype: NodePort

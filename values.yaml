@@ -33,21 +33,6 @@ securityContext: {}
 service:
   port: 80
 
-ingress:
-  enabled: true
-  className: ""
-  annotations: 
-     kubernetes.io/ingress.class: gce
-     kubernetes.io/tls-acme: "true"
-  hosts:
-    - host: chart-example.my
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
-  tls: 
-   - secretName: chart-example-tls
-     hosts:
-       - chart-example.my
 
 resources: {}
 

@@ -52,13 +52,13 @@ affinity: {}
 
 backend:
   image:
-    repository: lakshya7ghatotkach/lakshya:bk
+    repository: $REGION-docker.pkg.dev/$PROJECT_ID/$IMAGE_NAME:$IMAGE_TAG
   targetPort: 5000
-  servicetype: NodePort
+  servicetype: LoadBalancer
 
 
-frontend:
-  image:
-    repository: lakshya7ghatotkach/lakshya:v1
-  targetPort: 80
-  servicetype: NodePort
+# frontend:
+#   image:
+#     repository: lakshya7ghatotkach/lakshya:v1
+#   targetPort: 80
+#   servicetype: NodePort
